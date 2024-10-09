@@ -9,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './app-hero-list.component.css'
 })
 export class AppHeroListComponent {
-
+  public heroesNames:string[]=['spiderman','ironman','venom','ego']
+  public deletedHero?:string=''
+  eraseHero(){
+    const newHero=this.heroesNames.pop()
+    this.deletedHero=newHero
+  }
 }
