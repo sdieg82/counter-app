@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CounterAppComponent } from "./counter/counter-app/counter-app.component";
+import { CounterAppComponent } from "./counter/components/counter-app/counter-app.component";
 import { AppHeroListComponent } from "./heroes/app-hero-list/app-hero-list.component";
 import { HeroComponent } from "./heroes/hero/hero.component";
 
