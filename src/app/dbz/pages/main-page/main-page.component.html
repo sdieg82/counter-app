@@ -3,9 +3,9 @@
 
 <div class="row">
   <div class="col">
-    <app-list [characterList]="characterList"></app-list>
+    <app-list [characterList]="character"></app-list>
   </div>
   <div class="col">
-    <app-form-hero></app-form-hero>
+    <app-form-hero (onEventEmitter)="onNewCharacter($event)"></app-form-hero>
   </div>
 </div>

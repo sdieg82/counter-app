@@ -13,7 +13,7 @@ import { CharacterDbz } from '../../interfaces/character.interface';
 })
 export class MainPageComponent {
   @Output()
-  public characterList: CharacterDbz[] = [
+  public character: CharacterDbz[] = [
     {
       name: 'krillin',
       power: 500,
@@ -22,5 +22,13 @@ export class MainPageComponent {
       name: 'Goku',
       power: 9500,
     },
+    {
+      name: 'Vegeta',
+      power: 9500,
+    },
   ];
+
+  onNewCharacter(character:CharacterDbz):void{
+    this.character.push(character)
+  }
 }
