@@ -1,23 +1,23 @@
 <h1>{{name}}</h1>
 
-<dl>
-    <td>Nombre:</td>
-    <dd>{{name}}</dd>
+    <p>Nombre:</p>
+    <p>{{name}}</p>
     
-    <td>Edad:</td>
-    <dd>{{age}}</dd>
+    <p>Edad:</p>
+    <p>{{age}}</p>
 
-    <td>Método:</td>
-    <dd>{{description}}</dd>
+    <p>Método:</p>
+    <p>{{getDescription()}}</p>
 
-    <td>Capitalizado:</td>
-    <dd>{{capitalized}}</dd>
+    <p>Capitalizado:</p>
+    <p>{{capitalized}}</p>
     
+  <button class=" btn btn-primary" (click)="agePlus()">
+    +edad
+  </button>
+<button *ngIf="name!=='spiderman'" class="btn btn-primary mx-2" (click)="nameChange()">Cambiar nombre</button>
+
+<button class="btn btn-primary" (click)="ageChange()">Cambiar edad</button>
   
-  
-    
 
-    <button class="btn btn-primary mx-2">Cambiar nombre</button>
 
-    <button class="btn btn-primary">Cambiar edad</button>
-</dl>
