@@ -3,9 +3,12 @@
 
 <div class="row">
   <div class="col">
-    <app-list [characterList]="character"></app-list>
+    <app-list 
+      [characterList]="dbzService.character"
+      (deleteCharacter)="dbzService.deleteCharacterById($event)"
+    ></app-list>
   </div>
   <div class="col">
-    <app-form-hero (onEventEmitter)="onNewCharacter($event)"></app-form-hero>
+    <app-form-hero (addNewCharacter)="dbzService.onNewCharacter($event)" ></app-form-hero>
   </div>
 </div>

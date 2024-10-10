@@ -3,6 +3,7 @@ import { AppHeroListComponent } from '../../../heroes/app-hero-list/app-hero-lis
 import { ListComponent } from '../../components/list/list.component';
 import { FormHeroComponent } from '../../components/form-hero/form-hero.component';
 import { CharacterDbz } from '../../interfaces/character.interface';
+import { DbzService } from '../../services/dbz.service';
 
 @Component({
   selector: 'app-main-page',
@@ -12,23 +13,10 @@ import { CharacterDbz } from '../../interfaces/character.interface';
   styleUrl: './main-page.component.css',
 })
 export class MainPageComponent {
-  @Output()
-  public character: CharacterDbz[] = [
-    {
-      name: 'krillin',
-      power: 500,
-    },
-    {
-      name: 'Goku',
-      power: 9500,
-    },
-    {
-      name: 'Vegeta',
-      power: 9500,
-    },
-  ];
+  
+  constructor(
+    public dbzService:DbzService
+  ){}
 
-  onNewCharacter(character:CharacterDbz):void{
-    this.character.push(character)
-  }
+  
 }

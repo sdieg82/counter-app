@@ -14,9 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class FormHeroComponent {
   @Output()
-  public onEventEmitter:EventEmitter<CharacterDbz>=new EventEmitter
-
-
+  public addNewCharacter:EventEmitter<CharacterDbz>=new EventEmitter
   public character:CharacterDbz={
     name:'',
     power:0
@@ -25,7 +23,7 @@ export class FormHeroComponent {
   addCharacter(){
     console.log(this.character)
     if(this.character.name.length===0) return;
-    this.onEventEmitter.emit(this.character)
+    this.addNewCharacter.emit(this.character)
     this.character={
       name:'',
       power:0
